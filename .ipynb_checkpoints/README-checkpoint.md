@@ -4,7 +4,7 @@ Welcome to the **health insurance prediction** project!
 
 This repository provides tools and resources for predicting whether a website visitor is interesed in recommended health insurance or not.
 
-![health insurrance](https://github.com/tsila-andriantsoa/health_insurance_lead_prediction/blob/main/img/health_insurrance.jfif)
+![health insurrance](https://github.com/tsila-andriantsoa/health_insurance_lead_prediction/blob/main/img/health_insurance.jfif)
 
 ## Context
 
@@ -41,33 +41,36 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/sureshmecad
 | Response | 0 : Customer did not show interest in the recommended policy |
 | | 1 : Customer showed interest in the recommended policy |
 
-## Data preprocessing and EDA
-
-
-## Feature importance analysis and feature engineering
-
-
 ## Evaluation metric
 
 The evaluation metric recommended for this competition is ROC AUC score.
 
 ## Model training
 
-Firstly, 04 algorithms has been choosed for the project : 
-- Logistic regression
+The first step in the project was data preprocessing. Missing values were handled appropriately, and column data types were transformed to ensure compatibility with machine learning models. Following this, an exploratory data analysis (EDA) was conducted to identify basic patterns and relationships in the dataset, such as trends and correlations among key features.
+
+Next, feature importance analysis was performed to understand the contribution of each variable to the prediction task.
+
+For the modeling phase, four algorithms were chosen based on their suitability for the project:
+
+- Logistic Regression
 - Random Forest
 - Decision Tree
 - XGBoost
-  
-Secondly, 04 baseline models based on all features were trained using best parameters for each model.
 
-Thirdly, the best baseline model has been selected based on ROC AUC score, the baseline model get ROC AUC score 70%. 
+In the second step, baseline models were trained using all features and the best hyperparameters for each algorithm. The best baseline model was then selected based on its performance using the ROC AUC score, achieving a baseline score of **70%**.
 
-Then, features selection using grid search has been applied in order to improve the best baseline model.
-After analysing grid search results, we observe that the mean scores for top columns combination are very close. In this situation ranking solely based on the mean can be misleading. 
-One approach that can be used is ranking based on standard deviation scores. A lower standard deviation indicates that the performance of the model is consistent across the cross-validation folds suggesting that the model is less sensitive to variations in the data and is likely more robust. So the best columns combination ['reco_policy_premium_log', 'city_code_group', 'health_indicator', 'reco_policy_cat_group', 'accomodation_type'] has been choosed.
+To further improve the model, feature selection was applied using a grid search. After analyzing the results, it was observed that the mean ROC AUC scores for the top feature combinations were very close. In this scenario, ranking solely by mean scores could be misleading. Instead, ranking by the standard deviation of scores was considered, as a lower standard deviation indicates consistent performance across cross-validation folds, suggesting robustness.
 
-Finally, the final model was trained giving a ROC AUC score of 87%.
+Based on this approach, the best feature combination was identified as:
+
+- Reco_Policy_Premium
+- City_Code
+- Health_Indicator
+- Reco_Policy_Cat
+- Accommodation_Type
+
+Finally, the optimized model was trained using this selected set of features, achieving a significantly improved ROC AUC score of **87%**.
 
 ## Setup Instructions
 
