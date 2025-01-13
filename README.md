@@ -105,29 +105,29 @@ To set up this project locally with pipenv, follow these steps:
    
 5. Run the project locally with pipenv
 
-- A Trained model is already available within the folder **model**. However, if one wants to re-train the model, it can be done by running the following command.
+  A Trained model is already available within the folder **model**. However, if one wants to re-train the model, it can be done by running the following command.
    ```bash
    pipenv run python scr/train.py
    ```
    
-- To serve the model, run the following command.
+  To serve the model, run the following command.
    ```bash
    pipenv run python scr/predict.py
    ```
    
-- Once app deployed, requests can be made using the following command that provides an example of prediction using a sample json data.
+  Once app deployed, requests can be made using the following command that provides an example of prediction using a sample json data.
    ```bash
    pipenv run python src/predict_test.py
    ```
    
 6. To set up this projet using Docker Container
 
-- Build the docker image (make sure docker is already installed):
+  Build the docker image (make sure docker is already installed):
    ```bash
    docker build -t predict-app .
    ```
 
-- Run the image as Docker container:
+  Run the image as Docker container:
    ```bash
    docker run -d -p 5000:5000 predict-app
    ```   
