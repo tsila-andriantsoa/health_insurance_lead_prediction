@@ -9,7 +9,7 @@ COPY ["requirements.txt", "./"]
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code and model
-COPY ["src/predict.py" , "./"]
+COPY ["src/predict.py" , "src/predict_test.py"./"]
 COPY ["model/pipeline_best_model.pkl", "./"]
 
 # Expose the Flask app's port

@@ -77,7 +77,7 @@ Finally, the optimized model was trained using this selected set of features, ac
 
 ## Setup Instructions
 
-To set up this project locally, follow these steps:
+To set up this project locally with pipenv, follow these steps:
 
 1. Clone the repository:
    ```bash
@@ -96,20 +96,33 @@ To set up this project locally, follow these steps:
    pipenv shell
 
 5. Run the project locally with pipenv
-    ```bash
+
+Trained model is already available within the folder **model**. However, if one wants to re-train the model, it can be done by running the following command.
+
+   ```bash
    # train the model
-   pypenv python train.py
+   pipenv run python scr/train.py
 
-   # do prediction
-   pipenv run python predict.py
+To serve the model, run the following command.
 
-To set up this projet using Docker Container
+   ```bash
+   # serve model
+   pipenv run python scr/predict.py
+    
+Once app deployed, requests can be made using the following command that provides an example of prediction using a sample json data.
+   
+   ```bash
+   # send test request 
+   pipenv run python src/predict_test.py
 
-1. Build the docker image (make sure docker is already installed):
+6. To set up this projet using Docker Container
+
+Build the docker image (make sure docker is already installed):
    ```bash
    docker build -t predict-app .
+   
 
-2. Running the docker container:
+Running the docker container:
    ```bash
    docker run -d -p 5000:5000 predict-app
    
