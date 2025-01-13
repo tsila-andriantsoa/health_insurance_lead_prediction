@@ -4,7 +4,7 @@ Welcome to the **health insurance prediction** project!
 
 This repository provides tools and resources for predicting whether a website visitor is interesed in recommended health insurance or not.
 
-![health insurrance](https://github.com/tsila-andriantsoa/health_insurance_lead_prediction/blob/main/img/health_insurrance.png)
+![health insurrance](https://github.com/tsila-andriantsoa/health_insurance_lead_prediction/blob/main/img/health_insurrance.jfif)
 
 ## Context
 
