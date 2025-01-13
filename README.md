@@ -105,7 +105,7 @@ To set up this project locally with pipenv, follow these steps:
    
 5. Running the project
 
-- Run the project locally with pipenv
+- Run the project locally with **pipenv**
 
   A Trained model is already available within the folder **model**. However, if one wants to re-train the model, it can be done by running the following command.
    ```bash
@@ -122,7 +122,7 @@ To set up this project locally with pipenv, follow these steps:
    pipenv run python src/predict_test.py
    ```
    
-- Set up the projet using Docker Container
+- Set up the projet using **Docker Container**
 
   Build the docker image (make sure docker is already installed):
    ```bash
