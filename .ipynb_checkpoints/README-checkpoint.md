@@ -2,7 +2,7 @@
 
 Welcome to the **health insurance prediction** project! 
 
-This repository provides tools and resources for predicting whether a website visitor is interesed in recommended health insurance or not.
+This repository provides tools and resources for predicting whether a website visitor is interesed or not in recommended health insurance.
 
 ![health insurrance](https://github.com/tsila-andriantsoa/health_insurance_lead_prediction/blob/main/img/health_insurance.jfif)
 
@@ -43,7 +43,10 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/sureshmecad
 
 ## Evaluation metric
 
-The evaluation metric recommended for this competition is ROC AUC score.
+The evaluation metric recommended for this project is ROC AUC score. ROC AUC stands for Receiver Operating Characteristic - Area Under the Curve. 
+It is a performance metric for binary classification models, measuring how well the model distinguishes between the two classes. 
+The ROC curve plots the True Positive Rate (TPR) against the False Positive Rate (FPR) at various threshold settings. 
+The AUC represents the area under this curve and provides a single scalar value to summarize the model's performance.
 
 ## Model training
 
@@ -64,11 +67,11 @@ To further improve the model, feature selection was applied using a grid search.
 
 Based on this approach, the best feature combination was identified as:
 
-- Reco_Policy_Premium
-- City_Code
-- Health_Indicator
-- Reco_Policy_Cat
-- Accommodation_Type
+- `Reco_Policy_Premium`
+- `City_Code`
+- `Health_Indicator`
+- `Reco_Policy_Cat`
+- `Accommodation_Type`
 
 Finally, the optimized model was trained using this selected set of features, achieving a significantly improved ROC AUC score of **87%**.
 
