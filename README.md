@@ -121,6 +121,7 @@ To set up this project locally with pipenv, follow these steps:
    pipenv run python src/predict_test.py
    ```
    
+   
 - Set up the projet using **Docker Container**
 
   Build the docker image (make sure docker is already installed):
