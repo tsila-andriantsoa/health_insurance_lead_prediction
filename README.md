@@ -36,7 +36,6 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/sureshmecad
 | Upper_Age | Maximum age of the customer |
 | Lower_Age   | Minimum age of the customer |
 | Is_Spouse | If the customers are married to each other |
-| Region_Code | Customer Owns or Rents the house |
 | Health_Indicator | Encoded values for health of the customer |
 | Holding_Policy_Duration | Duration (in years) of holding policy (a policy that customer has already subscribed to with the company) |
 | Holding_Policy_Type | Type of holding policy |
